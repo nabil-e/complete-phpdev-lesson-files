@@ -37,8 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="1"
-                           name="prod-server-access" id="prod-server-access">
-                    <label class="form-check-label" for="prod-server-access">
+                           name="prod_server_access" id="prod_server_access">
+                    <label class="form-check-label" for="prod_server_access">
                         Production Server Access
                     </label>
                 </div>

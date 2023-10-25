@@ -11,7 +11,7 @@ class AccountTest extends TestCase
         $account = new App\Account();
 
         // Do something
-        $account->setAccountNumber(1);
+        $account->setAccountNumber(2);
 
         // Make assertions
         $this->assertSame(1, $account->getAccountNumber());

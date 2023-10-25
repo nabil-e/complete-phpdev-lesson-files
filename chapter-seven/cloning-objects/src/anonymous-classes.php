@@ -1,6 +1,6 @@
 <?php
 
-require_once './vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 interface Logger
 {
@@ -17,13 +17,14 @@ class AppErrorHandler
     }
 }
 
-$appErrorHandler = new AppErrorHandler(new class implements Logger {
-
+$logger = new class implements Logger {
     public function log(string $text)
     {
         print $text;
     }
-});
+};
+
+$appErrorHandler = new AppErrorHandler($logger);
 
 $appErrorHandler->getLogger()->log('Logging an example error message' . PHP_EOL);
 

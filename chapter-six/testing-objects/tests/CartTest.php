@@ -1,5 +1,6 @@
 <?php
 
+//require './vendor/autoload.php';
 use App\Cart;
 use PHPUnit\Framework\TestCase;
 
@@ -9,7 +10,7 @@ class CartTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->cart = new Cart();
+        $this->cart = new Cart;
     }
 
 
@@ -56,7 +57,13 @@ class CartTest extends TestCase
     }
 
 
-
+    /** @test */
+    function delPriceTest() {
+        $this->cart->price = 20;
+        $this->cart->delToPrice(5);
+        $price = $this->cart->price;
+        $this->assertEquals($price, 15);
+    }
 
 
 

@@ -41,6 +41,15 @@ class Account
         return $this->accountHolder;
     }
 
+    public function setProperty(Array $attributes) {
+        foreach ($attributes as $property => $value) {
+
+            if (property_exists($this, $property)) {
+
+                $this->$property = $value;
+            }
+        }
+    }
 
 
 

@@ -17,4 +17,9 @@ class Cart
     {
         $this->price += $amount;
     }
+
+    public function delToPrice(int $amount)
+    {
+        $this->price -= $amount;
+    }
 }
